@@ -4,8 +4,7 @@
     <h1>Customer Accounts</h1>
 
     <p class="subtitle">
-        A temporary directory of customer contact information stored
-        through a static PHP array.
+    A directory of customer contact information retrieved from the POS system database.
     </p>
 
     <p class="record-count">

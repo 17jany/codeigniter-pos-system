@@ -4,8 +4,7 @@
     <h1>User Accounts</h1>
 
     <p class="subtitle">
-        A list of staff members and their assigned responsibilities
-        within the POS system.
+        A list of staff accounts stored in the POS system database.
     </p>
 
     <p class="record-count">
@@ -18,7 +17,6 @@
                 <th>No.</th>
                 <th>Username</th>
                 <th>Full Name</th>
-                <th>Role</th>
             </tr>
         </thead>
 
@@ -29,16 +27,11 @@
                         <td class="number"><?= $index + 1 ?></td>
                         <td><?= esc($user['username']) ?></td>
                         <td><?= esc($user['full_name']) ?></td>
-                        <td>
-                            <span class="role">
-                                <?= esc($user['role']) ?>
-                            </span>
-                        </td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
                 <tr>
-                    <td class="empty-message" colspan="4">
+                    <td class="empty-message" colspan="3">
                         No staff accounts are available.
                     </td>
                 </tr>
