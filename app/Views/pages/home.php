@@ -1,41 +1,47 @@
-<section class="hero">
-    <p class="eyebrow">CODEIGNITER POS FOUNDATION</p>
+<section class="table-section">
+    <p class="eyebrow">TODAY'S SCHEDULE</p>
 
-    <h1>A simple start for better transactions.</h1>
-
+    <h1>Tasks for Today</h1>
     <p class="subtitle">
-        This project demonstrates how a basic Point-of-Sale system can be
-        organized using routes, controllers, views, and temporary PHP data.
+        Task scheduled for <?php echo esc(date('F j, Y')); ?>
     </p>
 
-    <a class="button" href="/customers">
-        Browse Customer Accounts
-    </a>
+    <p class="record-count">
+    <?= count($tasks) ?> tasks scheduled for today.
+    </p>   
+
+    <table>
+    <thread>
+        <tr>
+            <th>No.</th>
+            <th>Task</th>
+            <th>Status</th>
+            <th>Task Date</th>
+        </tr>
+    </thread>
+
+    <tbody>
+        <?php if (!empty($tasks)): ?>
+            <?php foreach ($tasks as $index => $task): ?>
+                <tr>
+                    <td class="number"><?= $index + 1?></td>
+                    <td><?= esc ($task['title']) ?></td>
+                    <td>
+                            <span class="role">
+                                <?= esc(ucwords($task['status'])) ?>
+                            </span>
+                        </td>
+                        <td><?= esc($task['task_date']) ?></td>
+                </tr>
+            <?php endforeach; ?>
+            <?php else: ?>
+                <tr>
+                    <td class="empty-message" colspan="4">
+                        No tasks are scheduled for today.
+                    </td>
+                </tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
 </section>
-
-<section class="card-grid">
-    <a class="card card-link" href="/customers">
-        <h2>Customer Records</h2>
-
-        <p>
-            View customer names, email addresses, and contact numbers.
-        </p>
-    </a>
-
-    <a class="card card-link" href="/users">
-        <h2>User Accounts</h2>
-
-        <p>
-            View staff members and their assigned roles in the system.
-        </p>
-    </a>
-
-    <a class="card card-link" href="/about">
-        <h2>About the Project</h2>
-
-        <p>
-            Learn how the application uses the CodeIgniter MVC structure.
-        </p>
-    </a>
-</section>
-
+    </table>

@@ -1,40 +1,36 @@
-<section class="hero">
-    <p class="eyebrow">ABOUT THE PROJECT</p>
+<section class="about-page">
+    <div class="about-number">01</div>
 
-    <h1>About the System</h1>
+    <div class="about-content">
+        <p class="eyebrow">ABOUT THE PROJECT</p>
 
-    <p class="subtitle">
-        This application is an early foundation for a Point-of-Sale system
-        built using CodeIgniter 4 and the Model-View-Controller approach.
-    </p>
+        <h1>
+            A simpler way to keep track of what needs to be done today.
+        </h1>
+
+        <p class="about-description">
+            Tasks for Today is a CodeIgniter 4 application that separates
+            today's priorities from the complete task schedule.
+        </p>
+
+        <div class="about-grid">
+            <article class="about-card accent-card">
+                <span>Developed by</span>
+                <h2>Janyrose Guelas</h2>
+                <p>BS Information Technology student</p>
+            </article>
+
+            <article class="about-card">
+                <span>Built with</span>
+                <h2>CodeIgniter 4</h2>
+                <p>PHP and MySQL web application</p>
+            </article>
+
+            <article class="about-card">
+                <span>Created for</span>
+                <h2>IT0049</h2>
+                <p>Laboratory Activity</p>
+            </article>
+        </div>
+    </div>
 </section>
-
-<section class="card-grid">
-    <article class="card">
-        <h2>Project Purpose</h2>
-
-        <p>
-            The project demonstrates how a multi-page website can be
-            organized using a PHP web framework.
-        </p>
-    </article>
-
-    <article class="card">
-        <h2>Application Structure</h2>
-
-        <p>
-            Routes receive page requests, controllers prepare the data,
-            and views display the final content in the browser.
-        </p>
-    </article>
-
-    <article class="card">
-        <h2>Temporary Data</h2>
-
-        <p>
-            Customer and staff records are stored in static PHP arrays
-            before database integration is introduced.
-        </p>
-    </article>
-</section>
-

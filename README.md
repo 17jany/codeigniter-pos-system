@@ -1,56 +1,29 @@
-# Simple POS System
+# Tasks for Today Management System
 
-A basic four-page Point-of-Sale system developed using CodeIgniter 4.
-
-## Application Pages
-
-- Home
-- About
-- Customer Accounts
-- User Accounts
+A CodeIgniter 4 web application that displays today's tasks, the complete task list, one demo user profile, and developer information.
 
 ## Features
 
-- CodeIgniter 4 routing
-- MVC-based project structure
-- Static PHP arrays as temporary data sources
-- Customer and staff account listings
-- Responsive black and light-gray interface
-- Navigation between all four pages
+- Welcome page showing only tasks scheduled for today
+- Task List page showing all tasks ordered by date
+- Profile page showing one demo user
+- Static About page identifying the developer
+- MySQL database integration
 
 ## Requirements
 
-- PHP 8.2 or later
+- PHP 8.1 or newer
 - Composer
+- MySQL or MariaDB
+- XAMPP or another local database server
 
 ## Installation
 
-1. Clone this repository.
+1. Clone or download this repository.
+
 2. Open a terminal inside the project folder.
+
 3. Install the dependencies:
 
 ```bash
 composer install
-```
-
-4. Rename `env` to `.env`.
-5. Configure `.env`:
-
-```ini
-CI_ENVIRONMENT = development
-app.baseURL = 'http://localhost:8081/'
-```
-
-6. Start the application:
-
-```bash
-php spark serve --port 8081
-```
-
-7. Open `http://localhost:8081` in a browser.
-
-## Data Source
-
-This version uses static PHP arrays as required by the activity. No database
-or database export is included in this version.
-

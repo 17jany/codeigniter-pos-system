@@ -2,16 +2,24 @@
 
 namespace App\Controllers;
 
+use App\Models\TaskModel;
+
 class Pages extends BaseController
 {
     public function home()
     {
+        $taskModel = new TaskModel();
+
         $data = [
-            'title' => 'Home',
+            'title' => "Today's Tasks",
+            'tasks' => $taskModel
+                ->where('task_date', date('Y-m-d'))
+                ->orderBy('id', 'ASC')
+                ->findAll(),
         ];
 
         return view('templates/header', $data)
-            . view('pages/home')
+            . view('pages/home', $data)
             . view('templates/footer');
     }
 
@@ -22,8 +30,7 @@ class Pages extends BaseController
         ];
 
         return view('templates/header', $data)
-            . view('pages/about')
+            . view('pages/about', $data)
             . view('templates/footer');
     }
 }
-
